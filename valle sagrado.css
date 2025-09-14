@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f5f1e9, #d9cbb6);
+    color: #4b3b2b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: #fffaf0;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(75, 59, 43, 0.2);
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7a5c3b;
+    text-shadow: 1px 1px 3px #c9b89a;
+}
+
+/* Secciones (ul) */
+ul {
+    list-style: none;
+    margin-bottom: 50px;
+    border-left: 5px solid #a67c00;
+    padding-left: 25px;
+    background: #fff7e6;
+    border-radius: 10px;
+    box-shadow: inset 3px 0 8px rgba(166, 124, 0, 0.3);
+}
+
+/* Subtítulos dentro de ul */
+ul > h2 {
+    font-family: 'Palatino Linotype', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #a67c00;
+    border-bottom: 2px solid #a67c00;
+    padding-bottom: 8px;
+}
+
+/* Imágenes */
+ul > img {
+    display: block;
+    width: 50%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(166, 124, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+ul > img:hover {
+    transform: scale(1.05);
+}
+
+/* Párrafos */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #5a4a2a;
+    font-style: italic;
+}
+
+/* Listas de puntos */
+li {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+    color: #6b5e3c;
+}
+
+/* Personalizar viñetas */
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a67c00;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a5c3b;
+    font-family: 'Georgia', serif;
+    padding: 15px 0;
+    border-top: 1px solid #a67c00;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    ul > h2 {
+        font-size: 1.4rem;
+    }
+    ul > img {
+        max-height: 180px;
+    }
+}

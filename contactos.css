@@ -1,0 +1,85 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+/* Contenedor */
+.Padre {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Párrafo */
+.Padre p {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Lista de contactos */
+.Padre ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Padre ul li {
+  margin: 12px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.Padre ul li ul {
+  margin-top: 6px;
+  padding-left: 20px;
+  font-weight: normal;
+}
+
+/* Enlaces */
+.Padre a {
+  text-decoration: none;
+  color: #0077b6;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.Padre a:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .Padre {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .Padre p {
+    font-size: 16px;
+  }
+}

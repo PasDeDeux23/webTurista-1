@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body y fuente general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Título principal */
+main > h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.4rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    letter-spacing: 1.5px;
+}
+
+/* Cada sección dentro de ul: Usamos ul como contenedor pero no con estilo lista */
+ul {
+    list-style: none;
+    margin-bottom: 60px;
+    padding-left: 0;
+}
+
+/* Títulos de sección (h2) */
+ul > h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #34495e;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 8px;
+}
+
+/* Imágenes */
+ul > img {
+    display: block;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    margin: 0 auto 25px auto;
+    transition: transform 0.3s ease;
+}
+
+/* Sutil efecto hover para la imagen */
+ul > img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(41, 128, 185, 0.4);
+}
+
+/* Párrafos */
+ul > p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+/* Items de lista (li) */
+ul > li {
+    font-size: 1.05rem;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 18px;
+    color: #666666;
+}
+
+/* Agregar un icono tipo “check” antes de cada li para elegancia */
+ul > li::before {
+    content: "✓";
+    color: #2980b9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999999;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 30px 20px;
+    }
+
+    main > h1 {
+        font-size: 2.5rem;
+    }
+
+    ul > h2 {
+        font-size: 1.6rem;
+    }
+
+    ul > p, ul > li {
+        font-size: 1rem;
+    }
+}

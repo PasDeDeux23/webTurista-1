@@ -1,0 +1,138 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ENCABEZADO */
+header {
+  background: #004d40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+/* NAVBAR */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #00796b;
+  border-radius: 4px;
+}
+
+/* SUBMENÚ */
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #00695c;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+nav ul li:hover ul {
+  display: flex;
+}
+
+nav ul li ul li a {
+  padding: 10px 15px;
+}
+
+nav ul li ul li a:hover {
+  background: #004d40;
+}
+
+/* CONTENIDO */
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main h2 {
+  color: #004d40;
+  margin: 20px 0 10px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #00796b;
+  padding-bottom: 5px;
+}
+
+main p {
+  margin-bottom: 10px;
+}
+
+main ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+main ul li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li ul {
+    position: static;
+    display: none;
+    width: 100%;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+}

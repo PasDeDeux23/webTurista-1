@@ -1,0 +1,129 @@
+/* cañon de colca.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f1e9; /* Fondo claro inspirado en tonos tierra */
+}
+
+/* Estilos para el main */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a3c34; /* Verde andino oscuro */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #d4a017; /* Dorado inca */
+    padding-bottom: 0.5rem;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    color: #2e6b5c; /* Verde intermedio */
+    margin: 2rem 0 1rem;
+    border-left: 5px solid #d4a017;
+    padding-left: 1rem;
+}
+
+/* Estilos para las imágenes */
+main img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para los párrafos */
+main p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Estilos para las listas */
+main ul {
+    list-style: disc;
+    margin: 1rem 0 2rem 2rem;
+}
+
+main ul li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #1a3c34;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main p, main ul li {
+        font-size: 1rem;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    main p, main ul li {
+        font-size: 0.9rem;
+    }
+}

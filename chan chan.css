@@ -1,0 +1,352 @@
+/* Variables CSS para consistencia temática */
+:root {
+  --primary-color: #c4621a; /* Terracota/adobe */
+  --secondary-color: #8b4513; /* Marrón tierra */
+  --accent-color: #d4af37; /* Oro ancestral */
+  --text-color: #2c1810;
+  --text-secondary: #4a3426;
+  --bg-gradient: linear-gradient(135deg, #f4f1ec 0%, #e8ddd4 100%);
+  --white: #ffffff;
+  --cream: #faf8f3;
+  --shadow-soft: rgba(196, 98, 26, 0.15);
+  --shadow-medium: rgba(139, 69, 19, 0.2);
+  --shadow-heavy: rgba(44, 24, 16, 0.3);
+  --border-radius: 12px;
+  --border-radius-large: 20px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset mejorado */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos base del body */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-color);
+  line-height: 1.7;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: 0 0 40px var(--shadow-soft);
+  border-radius: var(--border-radius-large);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto decorativo en el contenedor principal */
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+}
+
+/* Título principal */
+main h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  text-shadow: 2px 2px 4px var(--shadow-soft);
+}
+
+/* Decoración del título principal */
+main h1::after {
+  content: '🏛️';
+  display: block;
+  font-size: 2rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Secciones individuales */
+main ul {
+  list-style: none;
+  background: var(--cream);
+  margin-bottom: 3rem;
+  border-radius: var(--border-radius-large);
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px var(--shadow-medium);
+  border-left: 6px solid var(--primary-color);
+  transition: var(--transition);
+  position: relative;
+}
+
+main ul:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px var(--shadow-heavy);
+  border-left-color: var(--accent-color);
+}
+
+/* Títulos de sección */
+main h2 {
+  color: var(--secondary-color);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Línea decorativa bajo títulos */
+main h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Estilos para imágenes */
+main img {
+  display: block;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px var(--shadow-medium);
+  transition: var(--transition);
+  border: 4px solid var(--white);
+}
+
+main img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 40px var(--shadow-heavy);
+  border-color: var(--accent-color);
+}
+
+/* Párrafos descriptivos */
+main p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  text-align: justify;
+  padding: 1.5rem;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-color);
+  font-style: italic;
+  position: relative;
+}
+
+/* Icono decorativo en párrafos */
+main p::before {
+  content: '📜';
+  position: absolute;
+  left: -10px;
+  top: 1.5rem;
+  font-size: 1.5rem;
+  background: var(--white);
+  padding: 0.3rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px var(--shadow-soft);
+}
+
+/* Elementos de lista */
+main li {
+  background: var(--white);
+  margin-bottom: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(196, 98, 26, 0.1);
+  border-left: 4px solid var(--primary-color);
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+/* Iconos para elementos de lista */
+main li::before {
+  content: '🏺';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+}
+
+main li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px var(--shadow-medium);
+  border-left-color: var(--accent-color);
+}
+
+/* Iconos específicos por sección */
+main ul:nth-of-type(1) li::before { content: ''; }
+main ul:nth-of-type(2) li::before { content: ''; }
+main ul:nth-of-type(3) li::before { content: ''; }
+main ul:nth-of-type(4) li::before { content: ''; }
+
+/* Colores alternos por sección */
+main ul:nth-of-type(1) { border-left-color: #c4621a; }
+main ul:nth-of-type(2) { border-left-color: #2e7d32; }
+main ul:nth-of-type(3) { border-left-color: #1565c0; }
+main ul:nth-of-type(4) { border-left-color: #e65100; }
+
+main ul:nth-of-type(1) li { border-left-color: #c4621a; }
+main ul:nth-of-type(2) li { border-left-color: #2e7d32; }
+main ul:nth-of-type(3) li { border-left-color: #1565c0; }
+main ul:nth-of-type(4) li { border-left-color: #e65100; }
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación de entrada */
+main ul {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+main ul:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+
+main ul:nth-child(3n) {
+  animation-delay: 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  main ul {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  main img {
+    height: 250px;
+    margin: 1.5rem auto;
+  }
+  
+  main p {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  main li {
+    padding: 1rem 1rem 1rem 2.5rem;
+    font-size: 1rem;
+  }
+  
+  main li::before {
+    left: 0.7rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  main ul {
+    padding: 1rem;
+  }
+  
+  main img {
+    height: 200px;
+    margin: 1rem auto;
+  }
+}
+
+/* Mejoras para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Estados de enfoque */
+main ul:focus-within,
+main li:focus-within {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #e07b39;
+    --secondary-color: #b8651c;
+    --text-color: #f4f1ec;
+    --text-secondary: #d4c4b0;
+    --bg-gradient: linear-gradient(135deg, #2c1810 0%, #3d2619 100%);
+    --white: #3d2619;
+    --cream: #4a3426;
+  }
+}

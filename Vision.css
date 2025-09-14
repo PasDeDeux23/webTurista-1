@@ -1,0 +1,69 @@
+/* Estilos generales para una apariencia sofisticada */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #e6f0fa 0%, #f7f9fc 100%); /* Gradiente suave para un fondo elegante */
+    margin: 40px;
+    color: #1a1a1a; /* Tono oscuro para mejor contraste */
+    line-height: 1.8;
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center;
+    color: #1e2a44; /* Azul profundo para un toque refinado */
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    position: relative;
+}
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #1e2a44;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Contenedor principal */
+.Padre {
+    max-width: 900px; /* Ancho ligeramente mayor para un diseño más espacioso */
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para profundidad */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Padre:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del párrafo */
+.Padre p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo de la imagen */
+.Padre img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+.Padre img:hover {
+    transform: scale(1.02); /* Efecto de zoom sutil al pasar el cursor */
+}

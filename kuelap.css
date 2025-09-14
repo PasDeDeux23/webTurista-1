@@ -1,0 +1,139 @@
+/* kuelap.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+main:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00796b;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 50px;
+    border-left: 4px solid #00796b;
+    padding-left: 20px;
+    background: #f9fdfd;
+    border-radius: 8px;
+    box-shadow: inset 2px 0 5px rgba(0,121,107,0.1);
+    transition: background-color 0.3s ease;
+}
+
+ul:hover {
+    background-color: #e0f2f1;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #004d40;
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
+}
+
+img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    position: relative;
+    color: #00695c;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00796b;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    color: #004d40;
+}
+
+li:hover::before {
+    color: #004d40;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    img {
+        max-height: 200px;
+    }
+}
