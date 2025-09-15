@@ -203,55 +203,23 @@ footer {
     header h1 {
         font-size: 1.5rem;
         padding: 0 1rem;
+        margin-bottom: 0.5rem;
     }
     
+    /* Mantener navegación horizontal en tablet */
     nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav > ul > li {
-        width: 100%;
-        max-width: 300px;
+        justify-content: center;
+        gap: 0.3rem;
     }
     
     nav a {
-        text-align: center;
-        width: 100%;
-    }
-    
-    /* Submenú en móvil - igual comportamiento que desktop */
-    nav ul ul {
-        position: static;
-        background: rgba(255,255,255,0.15);
-        margin-top: 0;
-        box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-        border-radius: 5px;
-        opacity: 0;
-        visibility: hidden;
-        max-height: 0;
-        overflow: hidden;
-        transform: none;
-        transition: all 0.3s ease;
-    }
-    
-    /* Activar submenú en móvil con hover y focus */
-    nav ul li:hover > ul,
-    nav ul li:focus-within > ul {
-        opacity: 1;
-        visibility: visible;
-        max-height: 500px;
-        margin-top: 0.5rem;
-    }
-    
-    nav ul ul a {
-        padding: 0.75rem 1rem 0.75rem 2rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 0.6rem 0.8rem;
         font-size: 0.9rem;
     }
     
-    nav ul ul li:last-child a {
-        border-bottom: none;
+    /* Submenú en tablet - comportamiento normal */
+    nav ul ul {
+        min-width: 220px;
     }
     
     h2 {
